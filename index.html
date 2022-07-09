@@ -1,8 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2::53" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin: 0px;padding: 0px;font-family: "微软雅黑"}
+		body{height: 1000px;}
+		#service{width: 150px;height: 300px;background: #fff;position: fixed;border:5px solid #285F95;top:120px;right: -160px;}
+		#service span{position: absolute;left: -45px;width: 40px;height: 160px;background: url(back1.jpg);top: 66px;border-radius: 10px 0px 0px 10px;}
+		#service h4{font-size: 16px;text-align: center;line-height: 40px;}
+		#service p{font-size: 12px;text-align: center;color:#4D4D4D;}
+		#service ul{list-style: none;}
+		#service ul li{font-size: 12px;margin-left: 10px;line-height: 25px;}
+		#service ul li i{float: left;font-style:normal}
+	</style>
+	<script type="text/javascript">
+		window.οnlοad=function(){
+			var oDiv=document.getElementById('service');
+			var oFwidth=document.body.offsetWidth;
+			var Rig = oFwidth - 160;
+			oDiv.οnmοuseοver=function(){
+				oMuse(Rig);
+			}
+			oDiv.οnmοuseοut=function(){
+				oMuse(oFwidth);
+			}
+			var timer=null;
+			function oMuse(iTarget){
+				clearInterval(timer);
+				var oDiv=document.getElementById('service');
+				timer=setInterval(function(){
+					var speed=0;
+					if(oDiv.offsetLeft>iTarget){
+						speed=-10;
+					}else{
+						speed=10;
+					}
+					if(oDiv.offsetLeft==iTarget){
+						clearInterval(timer);
+					}else{
+						oDiv.style.left=oDiv.offsetLeft+speed+'px';
+					}
+				},30)
+			}
+		}
+	</script>
+</head>
 <body>
-<h1> chaonima </h1>
-</body>
+<div id="service">
+	<span></span>
+	<h4>在线客服</h4>
+	<p>客服在线时间：</p>
+	<p>早上7：00到下午5：00</p>
+	<ul>
+		<li><i>客服1：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服2：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服3：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服4：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服5：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服6：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+		<li><i>客服7：</i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=979912145&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:979912145:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+	</ul>
+</div>
 </html>
